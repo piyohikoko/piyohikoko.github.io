@@ -12,85 +12,52 @@
     <!-- BootstrapのJS読み込み -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <style>
-     /* 画面幅が1170px以上になった場合に背景色をつける */
-.main-v {
-    position: relative;
-    background-color: #333;
-    margin-bottom: 30px;
-}
- 
-/* メインcontainerを最大1170pxに指定 */
-/* Bootstrapのコンテンツエリアが最大1170pxのため */
-.main-container{
-    position:relative;
-    max-width: 1170px;
-    margin-left:auto;margin-right:auto;
-}
- 
-img{
-    max-width: 100%;
-    height: auto;
-}
- 
-.main-img{
-    display: block;
-}
- 
-/* メインのテキスト装飾 */
-.main-info h2{
-  position: absolute;
-  background: rgba(33, 33, 44, 0.7);
-  color: #fff;
-  padding:10px 10px;
-}
-.main-info2 h2{
-  position: absolute;
-  background: rgba(33, 33, 44, 0.7);
-  color: #fff;
-  padding:10px 10px;
-}
- 
-/*bootstrapのメディアクエリに合わせて、表示位置やフォントサイズを調整*/
-@media screen and (max-width: 767px) {
-    .main-info h2{
-      top: 10px;
-      right: 5px;
-      font-size: 1.3em;
-    }
-    .main-info2 h2{
-      top: 80px;
-      right: 5px;
-      font-size: 1.3em;
-    }
-}
- 
-@media screen and (min-width: 768px) {
-    .main-info h2{
-      top: 40px;
-      right: 40px;
-    }
-    .main-info2 h2{
-      top: 120px;
-      right: 40px;
-    }
-}
- 
-/* Medium devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
- 
-}
- 
-/* Large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
- 
-}
-     
-     body {
-        font-size: 15px;
-        color: black;
-        font-family: Meiryo, "Hiragino Kaku Gothic Pro";
-        background-color: skyblue;
+      .sitename{
+        margin:15px 0 15px;
       }
+      
+      .sitename a{
+        font-size: 1.6em;
+        color: inherit;
+      }
+      
+      i{
+        font-size: 1.3em;
+        color: inherit;
+      }
+ 
+      .navbar .navbar-inner {
+        padding: 0;
+      }
+ 
+      .navbar .nav {
+        margin: 0;
+        display: table;
+        width: 100%;
+      }
+ 
+      .navbar .nav li {
+        display: table-cell;
+        float: none;
+      }
+ 
+      .navbar .nav li a {
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid rgba(255, 255, 255, .75);
+        border-right: 1px solid rgba(0, 0, 0, .1);
+      }
+ 
+       .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+       }
+      
+        body {
+          color: black;
+          font-family: Meiryo, "Hiragino Kaku Gothic Pro";
+          background-color: white;
+        }
       
       .row {
         margin-bottom: 50px;
@@ -118,12 +85,11 @@ img{
         color: #666;
       }
       .container{
-        color:blue;
+        color:black;
       }
       
       .page-header{
         color:black;
-        font-size:4px;
         text-align:left;
         padding-top:0px;
         margin-left: 70px;
@@ -136,6 +102,10 @@ img{
         border-bottom:none;
       }
       
+     .profile{
+       text-align:center;
+     }
+      
      .red{
         color:red;
       }
@@ -144,10 +114,27 @@ img{
         color:blue;
       }
       
-      .yellow{
-        color:yellow;
+      .green{
+        color:green;
       }
       
+      .introduction{
+        text-align: left;
+        margin-left: 400px;
+        margin-right: 70px;
+        padding-top:10px;
+        padding-left:-30px;
+        padding-right:-30px;
+        padding-bottom: 40px;
+      }
+      
+      .white_blank{
+        background-color:white;
+        padding-left:100px;
+        font-size:20px;
+        padding-bottom:-200px;
+        margin-bottom:20px;
+      }
       
       @media (max-width: 768px) {
         body {
@@ -163,50 +150,45 @@ img{
   </head>
   <body>
     <header>
-      <div class="page-header" >
-        <h1>fun and colors for all the thinkers!</h1>
+      <div class="sitename"><div class="container">
+           <a href="#">Fun and think for all the thinkers</a>
+      </div></div>
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle"  data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">
+               <i class="fa fa-home"></i>  Home</a></li>
+            <li><a href="#about">
+               <i class="fa fa-info"></i>  About</a></li>
+            <li><a href="#contact">
+              <i class="fa fa-comments-o"></i>  Contact</a></li>
+          </ul>
+            </div><!--/.nav-collapse -->
+         </div>
       </div>
-    <div class="navbar navbar-default" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" 
-      data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-      <li><a href="#">
-             <i class="fa fa-home"></i>  Home</a></li>
-      <li><a href="#about">
-             <i class="fa fa-info"></i>  About</a></li>
-      <li><a href="#about">
-            <i class="fa fa-jpy"></i>  Price</a></li>
-      <li><a href="#contact">
-            <i class="fa fa-comments-o"></i>  Contact</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
- 
-  </div>
-</div>
       <main class="main-v">
        <div class="main-container">
-        <img src="myfavorite.jpg" alt="メインビジュアル" class="main-img" />
-          <div class="main-info">
-            <h2><strong><span class="red">考える作業を</span>
-                <span class="yellow">効率よく</span>
-                <span class="blue">視て楽しい</span></strong>
-            </h2>
-          </div>
-          <div class="main-info2">
-            <h2>そ ん な ア プ リ を 紹 介 し ま す ！</h2>
-          </div>
-        </div>  
-        </main>
-　 </header>
+        <img src="myfavorite.JPG" alt="メインビジュアル" class="main-img" />
+        <div class="introduction">
+        <h2><strong><span class="red">考える作業を</span>
+            </br></br>
+            <span class="green">効率よく</span>
+            <br/></br>
+            <span class="blue">視て楽しい</span>
+            </br></br>
+            そ ん な ア プ リ を 紹 介 し ま す ！</strong></h2> 
+      </div>
+      </div>
+      </main>
+    </header>
     <div class=container>
       <div class="row">
         <div class="icon col-sm-6 hidden-xs">
@@ -247,9 +229,24 @@ img{
           <p>何か新しいものの勉強をする時に、よく分からないからとりあえず適当に検索しがち。<br/>
              調べた事をしっかり、鮮やかに残すメモ帳をつくりました！
              詳しくは<a href="#">こちら</a>
-        <div class="white_blank">
-          <h2>メールによるお問い合わせ</h2>
+        </div>     
+        <div class="content col-sm-6">
+          <h1>アイディアをたどるメモ帳</h1>
+          <h2>いきあたりばったりの調べ物にさらば！</h2>
+          <p>何か新しいものの勉強をする時に、よく分からないからとりあえず適当に検索しがち。<br/>
+             調べた事をしっかり、鮮やかに残すメモ帳をつくりました！
+             詳しくは<a href="#">こちら</a>
+        </div>
+          <div class="profile">
+            <img src="profile.jpg" alt="プロフィール">
+            <h1>沖田篤彦</h1>
+            <h2>大阪大学経済学部４回生</h2>
+            <p>来年から某タイヤメーカーの事務職</p>
+            <p>大学の今しかできない事に取り組みたいと思い、テックアカデミーに参加</p>
+            <p>役に立つのは当然、視て楽しいをテーマにしたアプリを作ります</p>
           </div>
+          <div class="ask">
+            <h2>メールによるお問い合わせ</h2>
           <p>プライバシーポリシーをご確認、ご同意の上、送信ボタンを押してください。<br>
             お問い合わせの回答は、受付日から3営業日以内をめどにご返信差し上げます。
           </p>
@@ -297,16 +294,9 @@ img{
               <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default btn-success btn-block">お問い合わせを送信</button>
               </div>
+              </div>
             </div>
           </form>
-        </div>
-        <div class="content col-sm-6">
-          <h1>アイディアをたどるメモ帳</h1>
-          <h2>いきあたりばったりの調べ物にさらば！</h2>
-          <p>何か新しいものの勉強をする時に、よく分からないからとりあえず適当に検索しがち。<br/>
-             調べた事をしっかり、鮮やかに残すメモ帳をつくりました！
-             詳しくは<a href="#">こちら</a>
-        </div>
       </div>
     </div>
     <footer>
