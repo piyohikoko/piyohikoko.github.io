@@ -30,13 +30,6 @@
         margin-top: 50px;
       }
       
-      .content h2 {
-        margin-top: 0;
-        padding-bottom: 15px;
-        text-align: left;
-        font-size: 17px;
-      }
-      
       footer {
         border-top: 1px solid#e7e7e7;
         background-color: #f8f8f8;
@@ -68,8 +61,27 @@
         padding-right: 20px;
       }
       
-      .profile{
-       text-align:center;
+      #profile{
+        padding-left: -200px;
+        padding-right: -200px;
+      }
+      
+      #profile-picture{
+       text-align: right;
+       border-radius: 100%;
+       border: 5px solid white;
+       margin-left: 100px;
+       margin-right:-30px;
+     }
+     
+     #profile-explanation{
+       text-align:left;
+       margin-left:-230px;
+       padding-top: 15px;
+       padding-left:40px;
+       padding-right: 90px;
+       padding-bottom: 40px;
+       background-color: white;
      }
      
      .icon{
@@ -117,20 +129,27 @@
           <p>何か新しいものの勉強をする時に、よく分からないからとりあえず適当に検索しがち。調べた事をしっかり、鮮やかに残すメモ帳をつくりました！詳しくは<a href="#">こちら</a>
         </div>
       </div>
-    </div>  
+    </div> 
+    <hr />
     <div class="container">
       <h1>About Me</h1>
-        <div class="profile-photo hidden-xs">
-          <img src="profile.jpg" alt="プロフィール">
+        <div  id="profile">
+        <div class="row">
+          <div class="profile col-sm-6 hidden-xs">
+            <img src="profile.jpg" id="profile-picture" alt="プロフィール" />
+          </div>
+          <div class="profile col-sm-6 hidden-xs">
+            <div id="profile-explanation">
+              <h2>沖田篤彦</h2>
+              <br />
+              <h4>・大阪大学経済学部４回生</h4>
+              <h4>・来年から某タイヤメーカーに事務職として就職</h4>
+              <p>大学を卒業するまでに、今だからできる事をしたいと思い、プログラムに参加しました。</p>
+              <p>日々の考える作業を楽しくするアプリを作成します！</p>
+            </div>
+          </div>
         </div>
-        <div class="profile-explanation">
-          <h1>沖田篤彦</h1>
-          <h2>大阪大学経済学部４回生</h2>
-          <p>来年から某タイヤメーカーの事務職</p>
-          <p>大学の今しかできない事に取り組みたいと思い、テックアカデミーに参加</p>
-          <p>役に立つのは当然、視て楽しいをテーマにしたアプリを作ります</p>
         </div>
-      </div>
     </div>
     <div class="ask">
         <h1>メールによるお問い合わせ</h1>
